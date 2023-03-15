@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Jajar Genjang</title>
+</head>
+
+<style>
+    body  {
+      background-image: url("image/bg_image.jpg");
+    }
+</style>
+
+
+<body>
+    <script>
+        document.write("<h1 align='center'>Menghitung luas dan Keliling Jajargenjang</h1>");
+        document.write("<hr/>");
+
+        var luas;
+        var keliling;
+        var alas;
+        var tinggi;
+        var sisiMiring;
+        function hitung() {
+        alas = parseFloat(document.getElementById("ipt_alas").value);
+        tinggi = parseFloat(document.getElementById("ipt_tinggi").value);
+        luas = alas * tinggi;
+        sisiMiring = 3/4 * alas;
+        keliling = 2 * (alas + sisiMiring);
+        document.getElementById('opt_luas').value = luas;
+        document.getElementById('opt_keliling').value = keliling;
+        }
+    </script>
+
+<div>
+
+    <table>
+    <thead>
+        <tr>
+            <th>Jajar Genjang</th>
+        </tr>
+    </thead>
+
+        <tbody>
+        <tr>
+            <td>Masukan alas</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="ipt_alas"></td>
+        </tr>
+        
+        <tr>
+            <td>Masukan tinggi</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="ipt_tinggi"></td>
+        </tr>
+        <tr>
+            <td><button onclick="hitung()">Hitung</button></td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+        <tr>
+            <td>Luas jajar genjang</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="opt_luas" ></td>
+        </tr>
+        <tr>
+            <td>Keliling jajar genjang</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="opt_keliling"></td>
+        </tr>
+        </tfoot>
+
+ </table>
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persegi Panjang</title>
+
+    <style>
+        body  {
+          background-image: url("image/bg_image.jpg");
+        }
+    </style>
+
+    <script type="text/javascript">
+
+                    document.write("<h1 align='center'>Menghitung luas dan keliling Persegi Panjang</h1>");
+                    document.write("<hr/>");
+                        
+                    function hitungLuasKeliling()
+               {
+                    var Panjang, Lebar, Keliling, Luas;
+ 
+                    Panjang = parseInt(document.getElementById("panjang").value);
+                    Lebar = parseInt(document.getElementById("lebar").value);
+                    Keliling = 2 * (Panjang + Lebar);
+                    Luas = Panjang * Lebar;
+                    document.getElementById("keliling").value = Keliling;
+                    document.getElementById("luas").value = Luas;
+               }
+    </script>
+        
+</head>
+<body>
+          <form>
+            <table>
+                <tr>
+                    <td>Panjang</td>
+                    <td>:</td>
+                    <td><input type="number" id="panjang"></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Lebar</td>
+                        <td>:</td>
+                        <td><input type="number" id="lebar"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" value="Hitung" onclick="hitungLuasKeliling();"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Luas</td>
+                        <td>=</td>
+                        <td><input type="text" id="luas"></td>
+                    </tr> 
+
+                    <tr>
+                        <td>Keliling</td>
+                        <td>=</td>
+                        <td><input type="text" id="keliling"></td>
+                    </tr> 
+
+                
+               <!-- <p>Panjang : <input type="number" id="panjang"></p>
+               <p>Lebar   : <input type="number" id="lebar"></p>
+               <p><input type="button" value="Hitung" onclick="hitungLuasKeliling();"> </p>
+               Luas :     <input type="text" id="luas">
+               Keliling : <input type="text" id="keliling"> -->
+
+            </table>
+          </form>
+     </body>
+
+
+</html>
+
+</body>
+</html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segitiga</title>
+</head>
+
+<style>
+    body  {
+      background-image: url("image/bg_image.jpg");
+    }
+</style>
+
+<body>
+
+    <script type='text/javascript'>
+
+        document.write("<h1 align='center'>Menghitung luas Segitiga</h1>");
+        document.write("<hr/>");
+
+        function hitungluas(){
+        var alas = document.forms['hitungls']['alass'].value;
+        alas = parseInt(alas);
+        var tinggi = document.forms['hitungls']['tinggis'].value;
+        tinggi = parseInt(tinggi);
+        var luas = (alas*tinggi)/2;
+        document.forms['hitungls']['luass'].value = luas;
+        }
+    </script>
+
+<body>
+<form name='hitungls' method='post'>
+    <table>
+    <tr>
+    <td>Alas</td>
+    <td>:</td>
+    <td><input type='number' name='alass' onchange='hitungluas();'></td>
+    </tr>
+
+    <tr>
+    <td>Tinggi</td>
+    <td>:</td>
+    <td><input type='number' name='tinggis' onchange='hitungluas();'></td>
+    </tr>
+
+    <tr>
+    <td><input type="button" value="Hitung" onclick="hitungluas();"></td>
+    </tr>
+
+    <tr>
+    <td>Luas</td>
+    <td>=</td>
+    <td> <input type='text' name='luass' onchange='hitungluas();'></td>
+    </tr>
+    </table>
+    </form>
+</body>
+
+</html>
