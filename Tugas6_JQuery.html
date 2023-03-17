@@ -1,0 +1,32 @@
+<html>
+ <head>
+ <script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function(){
+ $(".sembunyi").click(function(){
+ $("#foto").hide("slow");
+ });
+ 
+ $(".tampil").click(function(){
+ $("#foto").show("normal");
+ });
+ });
+ </script>
+
+<style type="text/css">
+div
+{
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+}
+</style>
+
+ </head>
+ <body>
+ <button class="sembunyi">Sembunyikan</button>
+ <button class="tampil">Tampilkan</button>
+ <p><img id="foto" src="image/minum.jpg" /></p>
+ </body>
+</html>
